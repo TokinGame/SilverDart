@@ -7,9 +7,7 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 
-/**
- * Created by M on 10/21/2016.
- */import hu.tokingame.silverdart.Global.Assets;
+import hu.tokingame.silverdart.Global.Assets;
 
 /**
      * Created by davimatyi on 2017. 01. 10..
@@ -29,7 +27,7 @@ import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
         public static void refresh()
         {
             textButtonStyle = new TextButtonStyle();
-            textButtonStyle.font = Assets.manager.get(Assets.VERMIN_FONT_BIG); //TODO ide is betű
+            textButtonStyle.font = Assets.manager.get(Assets.ANTON_FONT);
 
             Pixmap p = new Pixmap(1,1, Pixmap.Format.Alpha);
             p.setColor(1);
@@ -57,7 +55,7 @@ import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
             style.up = new TextureRegionDrawable(new TextureRegion(texture));
             style.over = new TextureRegionDrawable(new TextureRegion(texture));
             style.down = new TextureRegionDrawable(new TextureRegion(texture));
-            style.font = Assets.manager.get(Assets.VERMIN_FONT_BIG); //TODO betű
+            style.font = Assets.manager.get(Assets.ANTON_FONT);
             this.setStyle(style);
         }
         public void setTextureUpDown(Texture up, Texture down){
@@ -79,7 +77,7 @@ import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 
         protected void init() {
             style = new TextButtonStyle();
-            style.font = Assets.manager.get(Assets.VERMIN_FONT_BIG); //TODO itt is sok betű
+            style.font = Assets.manager.get(Assets.ANTON_FONT);
             Pixmap p = new Pixmap(1,1, Pixmap.Format.Alpha);
             p.setColor(1);
             p.fill();

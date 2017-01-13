@@ -4,7 +4,6 @@ import com.badlogic.gdx.assets.AssetDescriptor;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.assets.loaders.FileHandleResolver;
 import com.badlogic.gdx.assets.loaders.resolvers.InternalFileHandleResolver;
-import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -20,15 +19,15 @@ public class Assets {
 
     public static AssetManager manager;
 
-    /*static final FreetypeFontLoader.FreeTypeFontLoaderParameter fontParameter = new FreetypeFontLoader.FreeTypeFontLoaderParameter();
+    static final FreetypeFontLoader.FreeTypeFontLoaderParameter fontParameter = new FreetypeFontLoader.FreeTypeFontLoaderParameter();
     static {
-        fontParameter.fontFileName = "Fonts/vermin_vibes_1989.ttf";
+        fontParameter.fontFileName = "fonts/Anton-Regular.ttf";
         fontParameter.fontParameters.size = 50;
         fontParameter.fontParameters.characters = hu.tokingame.silverdart.Global.Globals.CHARS;
         fontParameter.fontParameters.color = Color.WHITE;
-*/
+    }
     // Fonts
-    //public static final AssetDescriptor<BitmapFont> VERMIN_FONT = new AssetDescriptor<BitmapFont>("Fonts/vermin_vibes_1989.ttf", BitmapFont.class, fontParameter);
+    public static final AssetDescriptor<BitmapFont> ANTON_FONT = new AssetDescriptor<BitmapFont>("Fonts/Anton-Regular.ttf", BitmapFont.class, fontParameter);
 
 
     //<editor-fold desc="Car Textures>
@@ -59,6 +58,7 @@ public class Assets {
         manager.setLoader(BitmapFont.class, ".otf", new FreetypeFontLoader(resolver));
 
         //<editor-fold desc="Loading">
+        manager.load(ANTON_FONT);
 
         //</editor-fold>
 
